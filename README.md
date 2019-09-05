@@ -1,5 +1,7 @@
 # CircularArray
 
+[![Build Status](https://travis-ci.com/sveredyuk/ruby-circular-array.svg?branch=master)](https://travis-ci.com/sveredyuk/ruby-circular-array)
+
 You have a week with days and you want to iterate over the week and never met `nil`, but:
 ```ruby
 week = [:mon, :tue, :wed, :thu, :fri, :sat, :sun]
