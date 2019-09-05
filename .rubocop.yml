@@ -1,0 +1,17 @@
+AllCops:
+  TargetRubyVersion: 2.6
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/BlockLength:
+  ExcludedMethods: [
+    'describe', 'xdescribe', 'context',  'xcontext', 'it', 'xit', 'let', 'before', 'after', 'guard'
+  ]
+
+Layout/AlignHash:
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
