@@ -4,11 +4,8 @@ class CircularArray < Array
   VERSION = '0.1.0'
 
   def [](index)
-    result = super
+    return nil if empty?
 
-    return result if result
-    return nil if size.zero?
-
-    self[index - size]
+    super(index % size)
   end
 end
