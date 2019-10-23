@@ -35,6 +35,14 @@ RSpec.describe CircularArray do
         expect(circular_array[17]).to eq :c
         expect(circular_array[18]).to eq :a
       end
+
+      it 'no recursion' do
+        # this will detect accidentally introduced recursion
+        allow(circular_array).to receive(:[]).and_call_original
+        expect(circular_array).to receive(:[]).exactly(2).times
+        expect(circular_array[1]).to eq :b
+        expect(circular_array[10]).to eq :b
+      end
     end
 
     context 'empty' do
