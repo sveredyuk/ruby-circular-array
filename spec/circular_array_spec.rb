@@ -12,12 +12,20 @@ RSpec.describe CircularArray do
       it 'behaives like array' do
         expect(circular_array).to be_kind_of Array
 
+        expect(circular_array[-3]).to eq :a
+        expect(circular_array[-2]).to eq :b
+        expect(circular_array[-1]).to eq :c
         expect(circular_array[0]).to eq :a
         expect(circular_array[1]).to eq :b
         expect(circular_array[2]).to eq :c
       end
 
       it 'endless' do
+        expect(circular_array[-7]).to eq :c
+        expect(circular_array[-6]).to eq :a
+        expect(circular_array[-5]).to eq :b
+        expect(circular_array[-4]).to eq :c
+        # for indexes -3..2, see test above
         expect(circular_array[3]).to eq :a
         expect(circular_array[4]).to eq :b
         expect(circular_array[5]).to eq :c
