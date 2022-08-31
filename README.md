@@ -45,10 +45,9 @@ empty_circular_array[1] # => nil
 
 ## Use cases
 
-1. Matching over a list of possible solutions
-2. Cycling dates for complex delivery logic
-3. ...
-
+1. Round-robin selection algorithm
+2. Matching over a list of possible solutions
+3. Cycling dates for complex delivery logic
 
 ## Installation
 
